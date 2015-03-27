@@ -1,0 +1,25 @@
+
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <figure class="sponsor_container"<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
+
+    <?php if($this->gp_add_sponsor_popup): ?>
+      <a class="inline cboxElement" href="#sponsor_popup_<?php echo $this->id; ?>">
+    <?php endif; ?>
+
+      <?php $this->insert('picture_default', $this->picture); ?>
+
+    <?php if($this->gp_add_sponsor_popup): ?>
+      </a>
+      <div style='display:none'>
+        <div id='sponsor_popup_<?php echo $this->id; ?>' class="sponsor_popup">
+          <?php echo $this->popup; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+  </figure>
+
+<?php $this->endblock(); ?>

@@ -1,0 +1,38 @@
+
+<figure class="image_container"<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
+
+  <?php $this->insert('picture_default', $this->picture); ?>
+
+</figure>
+
+<?php if($this->gp_sponsor_name): ?>
+<h3><?php echo $this->gp_sponsor_name; ?></h3>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_address_1): ?>
+<p><?php echo $this->gp_sponsor_address_1; ?></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_address_2): ?>
+<p><?php echo $this->gp_sponsor_address_2; ?></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_address_3): ?>
+<p><?php echo $this->gp_sponsor_address_3; ?></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_contact): ?>
+<p>Kontakt: <?php echo $this->gp_sponsor_contact; ?></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_email): ?>
+<p>E-Mail: <a href="<?php echo $this->gp_sponsor_email; ?>"><?php echo $this->gp_sponsor_email_title; ?></a></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_url): ?>
+<p>Homepage: <a href="<?php echo $this->gp_sponsor_url; ?>" target="_blank"><?php echo $this->gp_sponsor_url; ?></a></p>
+<?php endif; ?>
+
+<?php if($this->gp_sponsor_information): ?>
+<p><?php echo $this->gp_sponsor_information; ?></p>
+<?php endif; ?>
