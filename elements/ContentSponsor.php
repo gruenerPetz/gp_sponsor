@@ -35,7 +35,8 @@ class ContentSponsor extends ContentImage
 	{
 		if ($this->arrData['gp_sponsor_email'])
 		{
-			$this->arrData['gp_sponsor_email'] = \String::encodeEmail($this->arrData['gp_sponsor_email']);
+			$this->arrData['gp_sponsor_email_title'] = $this->arrData['gp_sponsor_email'];
+			$this->arrData['gp_sponsor_email'] = \String::encodeEmail('mailto:' . $this->arrData['gp_sponsor_email']);
 		}
 
 		if ($this->arrData['gp_sponsor_url'])
